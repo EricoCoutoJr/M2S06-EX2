@@ -23,3 +23,12 @@ concluida bool
 //Verificando a tabela tarefa
 select * from tarefa
 
+// Criando tabela categoria
+create table categoria (
+categoriaID int primary key,
+nome varchar(10),
+descricao varchar(255)
+);
+
+//Verificar a tabela categoria
+select * from categoria
