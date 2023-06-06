@@ -32,3 +32,19 @@ descricao varchar(255)
 
 //Verificar a tabela categoria
 select * from categoria
+
+//Adiciona a chave estrangeira na tabela projeto e 
+//associando com a chave primaria da tabela tarefa
+alter table projeto
+add column tarefaID int,
+add constraint tarefaID
+foreign key (tarefaID)
+references tarefa(tarefaID);
+
+//Adiciona a chave estrangeira na tabela tarefa e 
+//associando com a chave primaria da tabela categoria
+alter table tarefa
+add column categoriaID int,
+add constraint categoriaID
+foreign key (categoriaID)
+references categoria(categoriaID);
